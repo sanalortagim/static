@@ -128,18 +128,6 @@
         <updated>Pazartesi, 29 Tem 2019 17:48:00</updated>
     </entry>
     <entry>
-        <id>https://arifsaban.com.tr/centos-update-komutu/</id>
-        <title>Centos Update Komutu</title>
-        <link rel="alternate" href="https://arifsaban.com.tr/centos-update-komutu/"/>
-        <content type="html">&lt;p&gt;Bazı uygulamaları çalıştırabilmemiz için son sürüm işletim sistemi istemektedir. Bu konumuzda güncelleme komutunu çalıştırdıktan sonra centos sistemimizi en son sürüme yükseltebileceğiz.&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://arifsaban.com.tr/centos-update-komutu/centos-update-komutu.png&#34;&gt;
-
-&lt;p&gt;&lt;strong&gt;Centos Güncelleme Komutu :&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <updated>Cumartesi, 27 Tem 2019 18:43:00</updated>
-    </entry>
-    <entry>
         <id>https://arifsaban.com.tr/centos-wget-komutu/</id>
         <title>Centos Wget Komutu</title>
         <link rel="alternate" href="https://arifsaban.com.tr/centos-wget-komutu/"/>
@@ -149,6 +137,18 @@
 &lt;p&gt;&lt;b&gt;Wget Nedir ?&lt;/b&gt;&lt;/p&gt;
 &lt;p&gt;Wget sunucuya uzaktan dosya indirmenizi sağlan bir modüldür. Örneğin &lt;strong&gt;apache&lt;/strong&gt;,&lt;strong&gt;lampp&lt;/strong&gt; kurulumu yapacağınız sırada uzaktan indirip konfigürasyon yapabilmenizi sağlar.&lt;/p&gt;
 </content>
+        <updated>Cumartesi, 27 Tem 2019 18:43:00</updated>
+    </entry>
+    <entry>
+        <id>https://arifsaban.com.tr/centos-update-komutu/</id>
+        <title>Centos Update Komutu</title>
+        <link rel="alternate" href="https://arifsaban.com.tr/centos-update-komutu/"/>
+        <content type="html">&lt;p&gt;Bazı uygulamaları çalıştırabilmemiz için son sürüm işletim sistemi istemektedir. Bu konumuzda güncelleme komutunu çalıştırdıktan sonra centos sistemimizi en son sürüme yükseltebileceğiz.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/centos-update-komutu/centos-update-komutu.png&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;Centos Güncelleme Komutu :&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
         <updated>Cumartesi, 27 Tem 2019 18:43:00</updated>
     </entry>
     <entry>

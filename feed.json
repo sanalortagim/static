@@ -45,19 +45,19 @@
             "tags": []
         },
         {
-            "id": "https://arifsaban.com.tr/centos-update-komutu/",
-            "url": "https://arifsaban.com.tr/centos-update-komutu/",
-            "title": "Centos Update Komutu",
-            "date_published": "27 Jul 2019 18:43:00",
-            "content_html": "<p>Bazı uygulamaları çalıştırabilmemiz için son sürüm işletim sistemi istemektedir. Bu konumuzda güncelleme komutunu çalıştırdıktan sonra centos sistemimizi en son sürüme yükseltebileceğiz.</p>\n<span id=\"more\"></span>\n<img src=\"https://arifsaban.com.tr/centos-update-komutu/centos-update-komutu.png\">\n\n<p><strong>Centos Güncelleme Komutu :</strong></p>\n<figure class=\"highlight yaml\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"string\">yum</span> <span class=\"string\">install</span> <span class=\"string\">update</span> <span class=\"string\">-y</span></span><br></pre></td></tr></table></figure>",
-            "tags": []
-        },
-        {
             "id": "https://arifsaban.com.tr/centos-wget-komutu/",
             "url": "https://arifsaban.com.tr/centos-wget-komutu/",
             "title": "Centos Wget Komutu",
             "date_published": "27 Jul 2019 18:43:00",
             "content_html": "<p>Çok basit gibi gelen ama işinize yarayacağı sırada akıllara gelmeyen bir kod olduğundan paylaşmak istedim.</p>\n<figure class=\"highlight yaml\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"string\">yum</span> <span class=\"string\">install</span> <span class=\"string\">wget</span> <span class=\"string\">-y</span></span><br></pre></td></tr></table></figure>\n<span id=\"more\"></span>\n<p><b>Wget Nedir ?</b></p>\n<p>Wget sunucuya uzaktan dosya indirmenizi sağlan bir modüldür. Örneğin <strong>apache</strong>,<strong>lampp</strong> kurulumu yapacağınız sırada uzaktan indirip konfigürasyon yapabilmenizi sağlar.</p>\n",
+            "tags": []
+        },
+        {
+            "id": "https://arifsaban.com.tr/centos-update-komutu/",
+            "url": "https://arifsaban.com.tr/centos-update-komutu/",
+            "title": "Centos Update Komutu",
+            "date_published": "27 Jul 2019 18:43:00",
+            "content_html": "<p>Bazı uygulamaları çalıştırabilmemiz için son sürüm işletim sistemi istemektedir. Bu konumuzda güncelleme komutunu çalıştırdıktan sonra centos sistemimizi en son sürüme yükseltebileceğiz.</p>\n<span id=\"more\"></span>\n<img src=\"https://arifsaban.com.tr/centos-update-komutu/centos-update-komutu.png\">\n\n<p><strong>Centos Güncelleme Komutu :</strong></p>\n<figure class=\"highlight yaml\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"string\">yum</span> <span class=\"string\">install</span> <span class=\"string\">update</span> <span class=\"string\">-y</span></span><br></pre></td></tr></table></figure>",
             "tags": []
         },
         {
