@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Arif Saban • \"bilişim teknolojileri\" Kategorisindeki Tüm Yazılar",
+    "description": "",
+    "home_page_url": "https://arifsaban.com.tr",
+    "items": [
+        {
+            "id": "https://arifsaban.com.tr/firewall-nedir/",
+            "url": "https://arifsaban.com.tr/firewall-nedir/",
+            "title": "Firewall Nedir?",
+            "date_published": "20 Jul 2019 18:43:00",
+            "content_html": "<p>Genel olarak, bir bilgisayar güvenlik duvarı, özel bir ağa ya da özel bir ağdan yetkisiz erişimi engelleyen bir yazılım programıdır. Güvenlik duvarları, LAN veya Internet gibi bir ağa bağlı bilgisayarların güvenliğini artırmak için kullanılabilecek araçlardır. Ağınız için kapsamlı bir güvenlik çerçevesinin ayrılmaz bir parçasıdır.</p>\n<span id=\"more\"></span>\n<img src=\"https://arifsaban.com.tr/firewall-nedir/firewall-nedir.jpg\">\n\n<p>Bir güvenlik duvarı, bilgisayarınızda izinli olup olmadığının belirlenmesi için, güvenlik duvarının her iki tarafına ulaşan – her bir “paket” bilgisini bilgisayardan gelen veya giden bir “paket duvarı” nı inceleyen bir “kod duvarı” kullanarak bilgisayarınızı kesinlikle Internet’ten yalıtır.Güvenlik duvarları, ne tür sistem işlevlerinin ve işlemlerinin ağ kaynaklarına erişime sahip olduğu konusunda ayrıntılı denetim sağlayarak güvenliği daha da artırabilme özelliğine sahiptir. Bu güvenlik duvarları, trafiğe izin vermek veya reddetmek için çeşitli imzaları ve ana bilgisayar koşullarını kullanabilir. Karmaşık olmasına rağmen, güvenlik duvarlarının kurulumu, kurulumu ve çalıştırılması nispeten kolaydır.</p>\n<p>Çoğu insan bir güvenlik duvarının ağda yüklü bir cihaz olduğunu ve ağ segmentinden geçen trafiği kontrol ettiğini düşünmektedir.</p>\n<h2><span id=\"guvenlik-duvari-ne-yapar\">Güvenlik Duvarı Ne Yapar ?</span><a href=\"#guvenlik-duvari-ne-yapar\" class=\"header-anchor\">#</a></h2>\n\n<p>Temel olarak, güvenlik duvarlarının aşağıdaki görevleri yerine getirebilmesi gerekir:</p>\n<p>• Kaynakları savunabilme<br>• Ağ trafiğini yönetebilme ve kontrol edilebilme<br>• Olaylar ile ilgili loglar tutabilme ve kaydedebilme.<br>Gibi bir çok örnek verilebilir.</p>\n",
+            "tags": []
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://arifsaban.com.tr</id>
+    <title>Arif Saban • &#34;bilişim teknolojileri&#34; Kategorisi</title>
+    <link href="https://arifsaban.com.tr" />
+    <updated>Cumartesi, 20 Tem 2019 18:43:00</updated>
+    <entry>
+        <id>https://arifsaban.com.tr/firewall-nedir/</id>
+        <title>Firewall Nedir?</title>
+        <link rel="alternate" href="https://arifsaban.com.tr/firewall-nedir/"/>
+        <content type="html">&lt;p&gt;Genel olarak, bir bilgisayar güvenlik duvarı, özel bir ağa ya da özel bir ağdan yetkisiz erişimi engelleyen bir yazılım programıdır. Güvenlik duvarları, LAN veya Internet gibi bir ağa bağlı bilgisayarların güvenliğini artırmak için kullanılabilecek araçlardır. Ağınız için kapsamlı bir güvenlik çerçevesinin ayrılmaz bir parçasıdır.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/firewall-nedir/firewall-nedir.jpg&#34;&gt;
+
+&lt;p&gt;Bir güvenlik duvarı, bilgisayarınızda izinli olup olmadığının belirlenmesi için, güvenlik duvarının her iki tarafına ulaşan – her bir “paket” bilgisini bilgisayardan gelen veya giden bir “paket duvarı” nı inceleyen bir “kod duvarı” kullanarak bilgisayarınızı kesinlikle Internet’ten yalıtır.Güvenlik duvarları, ne tür sistem işlevlerinin ve işlemlerinin ağ kaynaklarına erişime sahip olduğu konusunda ayrıntılı denetim sağlayarak güvenliği daha da artırabilme özelliğine sahiptir. Bu güvenlik duvarları, trafiğe izin vermek veya reddetmek için çeşitli imzaları ve ana bilgisayar koşullarını kullanabilir. Karmaşık olmasına rağmen, güvenlik duvarlarının kurulumu, kurulumu ve çalıştırılması nispeten kolaydır.&lt;/p&gt;
+&lt;p&gt;Çoğu insan bir güvenlik duvarının ağda yüklü bir cihaz olduğunu ve ağ segmentinden geçen trafiği kontrol ettiğini düşünmektedir.&lt;/p&gt;
+&lt;h2&gt;&lt;span id=&#34;guvenlik-duvari-ne-yapar&#34;&gt;Güvenlik Duvarı Ne Yapar ?&lt;/span&gt;&lt;a href=&#34;#guvenlik-duvari-ne-yapar&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Temel olarak, güvenlik duvarlarının aşağıdaki görevleri yerine getirebilmesi gerekir:&lt;/p&gt;
+&lt;p&gt;• Kaynakları savunabilme&lt;br&gt;• Ağ trafiğini yönetebilme ve kontrol edilebilme&lt;br&gt;• Olaylar ile ilgili loglar tutabilme ve kaydedebilme.&lt;br&gt;Gibi bir çok örnek verilebilir.&lt;/p&gt;
+</content>
+        <updated>Cumartesi, 20 Tem 2019 18:43:00</updated>
+    </entry>
+</feed>

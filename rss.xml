@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Arif Saban</title>
+        <link>https://arifsaban.com.tr</link>
+        <description></description>
+        <language>tr</language>
+        <pubDate>Pazar, 05 Nis 2020 18:43:00</pubDate>
+        <lastBuildDate>Pazar, 05 Nis 2020 18:43:00</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/steamcmd-kurulumu/</guid>
+            <title>SteamCMD Kurulumu</title>
+            <link>https://arifsaban.com.tr/steamcmd-kurulumu/</link>
+            <pubDate>Pazar, 05 Nis 2020 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;Öncelikle steamcmd kurarken hata almamak için sistemimizdeki paketleri ve sistemimizi güncellememiz gerekiyor. Ayrıca düzgün bir kurulum için bir kullanıcı hesabı oluşturmamız gerekiyor.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;toc&#34;&gt;
+
+&lt;!-- toc --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#centos-7-icin-kurulum&#34;&gt;Centos 7 İçin Kurulum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ubuntu-debian-x64-icin-kurulum&#34;&gt;Ubuntu / Debian x64 İçin Kurulum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#steamcmd-ile-server-kurmak&#34;&gt;SteamCMD İle Server Kurmak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#steamcmd-ile-giris&#34;&gt;SteamCMD İle Giriş&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sunucu-konumu&#34;&gt;Sunucu Konumu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#oyun-sunucusu-ayarlari&#34;&gt;Oyun Sunucusu Ayarları&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- tocstop --&gt;
+
+&lt;/div&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/steamcmd-kurulumu/linux-steamcmd-kurulumu.jpg&#34; alt=&#34;Linux SteamCMD Kurulumu&#34; title=&#34;Linux SteamCMD Kurulumu&#34;&gt;
+&lt;strong&gt;NOT : RESİM TEMSİLİ DEĞİLDİR.&lt;/strong&gt;
+
+&lt;h1&gt;&lt;span id=&#34;centos-7-icin-kurulum&#34;&gt;Centos 7 İçin Kurulum&lt;/span&gt;&lt;a href=&#34;#centos-7-icin-kurulum&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Sistem ve Paket Güncelleme Komutları&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;clean&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;all&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;upgrade&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;adduser&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;steam&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;(Belirlemiş&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;olduğunuz&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;kullanıcı&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;adınızı&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;yazabilirsiniz.)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;glibc.i686&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;libstdc++.i686&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1&gt;&lt;span id=&#34;ubuntu-debian-x64-icin-kurulum&#34;&gt;Ubuntu / Debian x64 İçin Kurulum&lt;/span&gt;&lt;a href=&#34;#ubuntu-debian-x64-icin-kurulum&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;apt-get&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;apt-get&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;upgrade&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;adduser&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;steam&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;apt-get&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;lib32gcc1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Peki bu kullanıcıya nasıl geçiş yapacağız ?&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;su&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-ls&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/bin/bash&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;steam&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Oluşturma komutunda steam olarak belirttiğim için steam yazıyorum.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;~&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Başarılı bir şekilde steam adlı kullanıcıya geçiş yapmış bulunmaktayız. Geriye steamcmd dosyalarını kurmak kaldı.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;wget&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Dosyaları tar.gz ‘den çıkarıyoruz.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;xf&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;steamcmd_linux.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Şimdi belirttiğim komut ile steamcmd başlatıp kendisi otomatik olarak dosyaları indirmeye başlayacaktır.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;./steamcmd.sh&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1&gt;&lt;span id=&#34;steamcmd-ile-server-kurmak&#34;&gt;SteamCMD İle Server Kurmak&lt;/span&gt;&lt;a href=&#34;#steamcmd-ile-server-kurmak&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Kurulumumuz başarılı bir şekilde gerçekleşti ise server kurmaya hazırız demektir. Kurmakta sorun yaşayan arkadaşlar yorum kısmında hatalarını belirtebilirler elimden geldiğince yardımcı olmaya çalışacağım.&lt;/p&gt;
+&lt;h1&gt;&lt;span id=&#34;steamcmd-ile-giris&#34;&gt;SteamCMD İle Giriş&lt;/span&gt;&lt;a href=&#34;#steamcmd-ile-giris&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Steamcmd başlattık şimdi giriş yapmamız gerekecek.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;login&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;anonymous&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Veya&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;login&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;kendisteamkullaniciadiniz&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Şimdi arkadaşlar sunucusunu kuracağımız oyuna sahip isek kendi kullanıcı adımız ve şifremiz ile giriş yapmamız gerekicek. Giriş yaparken steam guard şifresi vs. isteyecektir. Örneğin bazı oyunlar için anonymous olarak giriş yaptığımızda dosyaları indirmemektedir sebebi ise sahip olunan bir hesap ile giriş yapmamış olmamızdır.&lt;/p&gt;
+&lt;h1&gt;&lt;span id=&#34;sunucu-konumu&#34;&gt;Sunucu Konumu&lt;/span&gt;&lt;a href=&#34;#sunucu-konumu&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Kuracağımız klasörü belirtiyoruz.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;force_install_dir&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;./klasörünkonumu&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1&gt;&lt;span id=&#34;oyun-sunucusu-ayarlari&#34;&gt;Oyun Sunucusu Ayarları&lt;/span&gt;&lt;a href=&#34;#oyun-sunucusu-ayarlari&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Belirtmiş olduğumuz klasöre hangi oyunun sunucusunu kuracak isek oyunun idsini almamız gerekir. Steamde oyun mağazına gittiğinizde url adresinin sonunda rakamlar olacak. Rakamlar o oyunun idsini belirtmektedir. Örnekte 740 (CSGO) İdsidir.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;app_update&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;740&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;validate&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;740 yerine kuracağınız oyunun idsini yazmanız gerekicek.&lt;/p&gt;
+&lt;p&gt;Ve bu şekilde oyun dosyalarımızı steamcmd ile indirebiliriz. Oyun sunucularının başlatma komutları birbirinden farklı olabiliyor. Öğrenmek için oyunların kendi websitesi üzerinden bilgi edinebilirsiniz. Umarım anlatabilmişimdir. Sorularınız olduğunda yazmaktan çekinmeyin sağlıklı günler diliyorum.&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/t-sql-not-puanlama-ornegi/</guid>
+            <title>T-SQL Not Puanlama Örneği</title>
+            <link>https://arifsaban.com.tr/t-sql-not-puanlama-ornegi/</link>
+            <pubDate>Cumartesi, 30 Kas 2019 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;Örneğimizdeki amaç sınavlardan aldığımız notun hangi puana denk geldiğini bulmaktır. Örneğin 50 aldığımızı varsayalım karnemize 2 olarak yansıyacaktır. Notu girip bunu öğrenebileceğimiz kodlar aşağıdaki gibidir.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/t-sql-not-puanlama-ornegi/tsql-puan-ornegi.jpg&#34; alt=&#34;T-SQL Not Puanlama Örneği | Arif Saban&#34; title=&#34;T-SQL Not Puanlama Örneği | Arif Saban&#34; width=&#34;838&#34; height=&#34;355&#34;&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;T-SQL Kodu&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Declare&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;INT&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;gt;=0&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;AND&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;44&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;1-Bir&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Else&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;gt;=45&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;AND&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;lt;=54&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;2-İki&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Else&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;gt;=55&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;AND&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;lt;=69&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;3-Üç&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Else&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;gt;=70&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;AND&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;lt;=84&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;4-Dört&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Else&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;gt;=85&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;AND&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@notu&amp;lt;=100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;5-Beş&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;Not 0-100 aralığında değil!!!&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/t-sql-sayinin-tek-cift-oldugunu-bulan-ornek/</guid>
+            <title>T-SQL Sayının Tek Çift Olduğunu Bulan Örnek</title>
+            <link>https://arifsaban.com.tr/t-sql-sayinin-tek-cift-oldugunu-bulan-ornek/</link>
+            <pubDate>Cumartesi, 30 Kas 2019 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;T-SQL ‘de değişkene atadığımız sayının tek veya çift olduğunu bulan program aşağıdaki gibidir.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/t-sql-sayinin-tek-cift-oldugunu-bulan-ornek/tek.jpg&#34; alt=&#34;t-sql örnekleri&#34; title=&#34;T-SQL Sayının Tek veya Çift Olduğunu Bulan Örnek&#34; width=&#34;650&#34; height=&#34;273&#34;&gt;
+
+&lt;img src=&#34;https://arifsaban.com.tr/t-sql-sayinin-tek-cift-oldugunu-bulan-ornek/cift.jpg&#34; alt=&#34;t-sql örnekleri&#34; title=&#34;T-SQL Sayının Tek veya Çift Olduğunu Bulan Örnek&#34; width=&#34;650&#34; height=&#34;273&#34;&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;T-SQL Kodu&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Declare&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@sayi&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;INT&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Set&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@sayi&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;52&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;@sayi&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;Sayı çifttir.&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;string&#34;&gt;Print&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;Sayı tektir&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Go&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/linux-ssh-portu-degistirme/</guid>
+            <title>Linux SSH Portu Değiştirme</title>
+            <link>https://arifsaban.com.tr/linux-ssh-portu-degistirme/</link>
+            <pubDate>Pazartesi, 29 Tem 2019 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;Uyarı :&lt;/strong&gt;  Yeni belirlemiş olduğunuz ssh portunuzun bilinmiş veya engellenmiş portlar ile çakışmaması için kontrollerinizi gerçekleştiriniz.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;İlk olarak ssh bağlantınızı gerçekleştirin ve root olarak giriş yapın.&lt;/p&gt;
+&lt;p&gt;Sonrasında şu komutu uygulayalım.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Düzenlenmesi Gereken Dosya Yolu&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;vi&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/etc/ssh/sshd_config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Şu satırı bulun.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Port 22&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Satırda bulunan # işaretini kaldırıp ve portumuzu belirliyoruz. Örnek aşağıda gösterilmiştir.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Yapılması Gereken Düzenleme&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;Port&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;40&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Bu değişikliklerin aktif olabilmesi için ssh servisini yeniden başlatmamız gerekiyor.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption&gt;&lt;span&gt;Servisi Resetleme Komutu&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;service&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;sshd&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;restart&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Ardından yeni port ile bağlantı kurabiliriz.&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/bad-elf-interpreter-no-such-file-or-directory-hatasi-ve-cozumu/</guid>
+            <title>No Such File or Directory Hatası ve Çözümü</title>
+            <link>https://arifsaban.com.tr/bad-elf-interpreter-no-such-file-or-directory-hatasi-ve-cozumu/</link>
+            <pubDate>Pazartesi, 29 Tem 2019 17:48:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;Sisteminiz 64 bit ve kullandığınız uygulama veya servis 32 bit ile çalışıyordur. Bu hatanın çözümü glibc 32 bit paketini kurmaktır. Kurduğunuzda başarılı bir şekilde uygulamanızı veya servisini çalıştırabileceksiniz.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;img src=&#34;https://arifsaban.com.tr/bad-elf-interpreter-no-such-file-or-directory-hatasi-ve-cozumu/no-such-file-directory-hatasi-cozumu.png&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;Çözüm Yolu:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Linux üzerinden ilgili glibc paketini yüklenilir. Eğer linux deposu kullanmıyor ise glibc rpm paketi üzerinden işletim sisteminize ait paketi bulup kurarak sorunu çözebilirsiniz.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CentOS&lt;/strong&gt;/&lt;strong&gt;RedHat&lt;/strong&gt;/&lt;strong&gt;Fedora&lt;/strong&gt;/&lt;strong&gt;Suse&lt;/strong&gt;/&lt;strong&gt;Mandriva&lt;/strong&gt; İşletim Sistemleri İçin :&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;glibc.i686&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian&lt;/strong&gt;/&lt;strong&gt;Ubuntu&lt;/strong&gt;/&lt;strong&gt;Mint&lt;/strong&gt;/&lt;strong&gt;Crunchbang&lt;/strong&gt; İşletim Sistemleri İçin:&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;apt-get&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;ia32-libs&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;İşletim sistemleri ve komutları karşısındadır. Kullandığınız işletim sistemine göre bu komutları girdiğinizde sorun çözülmüş olacaktır.&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/centos-update-komutu/</guid>
+            <title>Centos Update Komutu</title>
+            <link>https://arifsaban.com.tr/centos-update-komutu/</link>
+            <pubDate>Cumartesi, 27 Tem 2019 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;Bazı uygulamaları çalıştırabilmemiz için son sürüm işletim sistemi istemektedir. Bu konumuzda güncelleme komutunu çalıştırdıktan sonra centos sistemimizi en son sürüme yükseltebileceğiz.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/centos-update-komutu/centos-update-komutu.png&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;Centos Güncelleme Komutu :&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/centos-wget-komutu/</guid>
+            <title>Centos Wget Komutu</title>
+            <link>https://arifsaban.com.tr/centos-wget-komutu/</link>
+            <pubDate>Cumartesi, 27 Tem 2019 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;Çok basit gibi gelen ama işinize yarayacağı sırada akıllara gelmeyen bir kod olduğundan paylaşmak istedim.&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;yum&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;wget&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;-y&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;p&gt;&lt;b&gt;Wget Nedir ?&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;Wget sunucuya uzaktan dosya indirmenizi sağlan bir modüldür. Örneğin &lt;strong&gt;apache&lt;/strong&gt;,&lt;strong&gt;lampp&lt;/strong&gt; kurulumu yapacağınız sırada uzaktan indirip konfigürasyon yapabilmenizi sağlar.&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://arifsaban.com.tr/firewall-nedir/</guid>
+            <title>Firewall Nedir?</title>
+            <link>https://arifsaban.com.tr/firewall-nedir/</link>
+            <pubDate>Cumartesi, 20 Tem 2019 18:43:00</pubDate>
+            <description><![CDATA[ &lt;p&gt;Genel olarak, bir bilgisayar güvenlik duvarı, özel bir ağa ya da özel bir ağdan yetkisiz erişimi engelleyen bir yazılım programıdır. Güvenlik duvarları, LAN veya Internet gibi bir ağa bağlı bilgisayarların güvenliğini artırmak için kullanılabilecek araçlardır. Ağınız için kapsamlı bir güvenlik çerçevesinin ayrılmaz bir parçasıdır.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://arifsaban.com.tr/firewall-nedir/firewall-nedir.jpg&#34;&gt;
+
+&lt;p&gt;Bir güvenlik duvarı, bilgisayarınızda izinli olup olmadığının belirlenmesi için, güvenlik duvarının her iki tarafına ulaşan – her bir “paket” bilgisini bilgisayardan gelen veya giden bir “paket duvarı” nı inceleyen bir “kod duvarı” kullanarak bilgisayarınızı kesinlikle Internet’ten yalıtır.Güvenlik duvarları, ne tür sistem işlevlerinin ve işlemlerinin ağ kaynaklarına erişime sahip olduğu konusunda ayrıntılı denetim sağlayarak güvenliği daha da artırabilme özelliğine sahiptir. Bu güvenlik duvarları, trafiğe izin vermek veya reddetmek için çeşitli imzaları ve ana bilgisayar koşullarını kullanabilir. Karmaşık olmasına rağmen, güvenlik duvarlarının kurulumu, kurulumu ve çalıştırılması nispeten kolaydır.&lt;/p&gt;
+&lt;p&gt;Çoğu insan bir güvenlik duvarının ağda yüklü bir cihaz olduğunu ve ağ segmentinden geçen trafiği kontrol ettiğini düşünmektedir.&lt;/p&gt;
+&lt;h2&gt;&lt;span id=&#34;guvenlik-duvari-ne-yapar&#34;&gt;Güvenlik Duvarı Ne Yapar ?&lt;/span&gt;&lt;a href=&#34;#guvenlik-duvari-ne-yapar&#34; class=&#34;header-anchor&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Temel olarak, güvenlik duvarlarının aşağıdaki görevleri yerine getirebilmesi gerekir:&lt;/p&gt;
+&lt;p&gt;• Kaynakları savunabilme&lt;br&gt;• Ağ trafiğini yönetebilme ve kontrol edilebilme&lt;br&gt;• Olaylar ile ilgili loglar tutabilme ve kaydedebilme.&lt;br&gt;Gibi bir çok örnek verilebilir.&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
